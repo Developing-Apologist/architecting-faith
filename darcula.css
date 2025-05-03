@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap");
+
+:root {
+    /* Darcula Theme Colors */
+    --darcula-bg: #2b2b2b;
+    --darcula-bg-darker: #1e1e1e;
+    --darcula-text: #a9b7c6;
+    --darcula-accent: #9876aa;
+    --darcula-highlight: #4e5254;
+    --darcula-selection: #214283;
+    --darcula-keyword: #cc7832;
+    --darcula-string: #6a8759;
+    --darcula-number: #6897bb;
+    --darcula-comment: #808080;
+    
+    /* Layout Variables */
+    --header-1-align: center;
+    --header-align: center;
+    --content-align: center;
+    --content-line-height: 1.3;
+    --content-padding-bottom: 0.5em;
+    --math-align: center;
+    --smaller-font-size: 2.6rem;
+}
+
+html, body {
+    background-color: var(--darcula-bg-darker);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.reveal {
+    background-color: var(--darcula-bg-darker);
+    color: var(--darcula-text);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.reveal .slides {
+    background-color: var(--darcula-bg-darker);
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    text-align: var(--content-align);
+    background-color: var(--darcula-bg-darker);
+    color: var(--darcula-text);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: var(--header-align);
+    font-weight: 800;
+    margin-bottom: var(--content-padding-bottom);
+    line-height: 1.25;
+    color: var(--darcula-text);
+}
+
+h1 {
+    text-align: var(--header-1-align);
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+b, strong {
+    color: var(--darcula-accent);
+    font-weight: bold;
+}
+
+i, em {
+    font-style: italic;
+}
+
+a {
+    color: var(--darcula-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--darcula-highlight);
+    text-decoration: underline;
+}
+
+code {
+    background-color: var(--darcula-highlight);
+    font-family: "Inconsolata", monospace;
+    font-size: 0.8em;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    color: var(--darcula-text);
+}
+
+pre code:not(.mermaid) {
+    background-color: var(--darcula-highlight);
+    text-align: left;
+    font-size: var(--smaller-font-size);
+    white-space: pre-wrap;
+    margin-bottom: var(--content-padding-bottom);
+    padding: 1em;
+    border-radius: 0.4em;
+}
+
+p {
+    line-height: var(--content-line-height);
+    margin-bottom: var(--content-padding-bottom);
+}
+
+blockquote {
+    color: var(--darcula-text);
+    background-color: var(--darcula-highlight);
+    font-style: italic;
+    line-height: var(--content-line-height);
+    border-left: 4px solid var(--darcula-accent);
+    padding: 0.5em 1em;
+    margin-bottom: var(--content-padding-bottom);
+}
+
+img, video, iframe {
+    max-width: 100%;
+    max-height: 90vh;
+    margin-bottom: var(--content-padding-bottom);
+}
+
+pre code {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+div.MathJax_Display {
+    text-align: var(--math-align) !important;
+    margin-bottom: var(--content-padding-bottom);
+}
+
+table {
+    font-size: var(--smaller-font-size);
+    border-collapse: collapse;
+    margin-bottom: var(--content-padding-bottom);
+    color: var(--darcula-text);
+}
+
+th {
+    font-weight: bold;
+    background-color: var(--darcula-highlight);
+}
+
+td {
+    border-bottom: 1px solid var(--darcula-highlight);
+}
+
+th, td {
+    padding: 0.2em 0.8em;
+}
+
+li {
+    text-align: left;
+    line-height: var(--content-line-height);
+    margin-left: 3ch;
+    color: var(--darcula-text);
+}
+
+.reveal section > ul, .reveal section > ol {
+    margin-bottom: var(--content-padding-bottom);
+}
+
+.reveal section ol {
+    list-style-type: decimal;
+}
+
+.reveal section ul {
+    list-style-type: disc;
+}
+
+.reveal section ul ul {
+    list-style-type: square;
+}
+
+.reveal section ul ul ul {
+    list-style-type: circle;
+}
+
+.reveal .progress {
+    height: 1vh;
+    background: var(--darcula-highlight);
+}
+
+.reveal .progress span {
+    background: var(--darcula-accent);
+}
+
+.reveal .controls {
+    color: var(--darcula-accent);
+    right: 6em;
+}
+
+.reveal .slide-number {
+    font-size: 1rem;
+    color: var(--darcula-accent);
+    background-color: transparent;
+}
+
+.reveal .slide-number a {
+    text-decoration: none;
+}
+
+div.center > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.multicolumn {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 5vw;
+    margin-bottom: var(--content-padding-bottom);
+}
+
+/* Syntax highlighting */
+.reveal .hljs-keyword {
+    color: var(--darcula-keyword);
+}
+
+.reveal .hljs-string {
+    color: var(--darcula-string);
+}
+
+.reveal .hljs-number {
+    color: var(--darcula-number);
+}
+
+.reveal .hljs-comment {
+    color: var(--darcula-comment);
+}
+
+/* Selection color */
+.reveal ::selection {
+    background-color: var(--darcula-selection);
+    color: var(--darcula-text);
+} 
